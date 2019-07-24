@@ -60,7 +60,7 @@
         <OutArgument x:TypeArguments="x:Int32">[intInit]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="x:Int32">110</InArgument>
+        <InArgument x:TypeArguments="x:Int32">119</InArgument>
       </Assign.Value>
     </Assign>
   </Sequence>
