@@ -3,10 +3,12 @@
   "description": "test for source management in GIT",
   "main": "Main.xaml",
   "dependencies": {
+    "Microsoft.Net.Http": "[2.2.29]",
     "UiPath.Excel.Activities": "[2.6.2]",
     "UiPath.Mail.Activities": "[1.5.1]",
     "UiPath.System.Activities": "[19.7.0]",
-    "UiPath.UIAutomation.Activities": "[19.7.0]"
+    "UiPath.UIAutomation.Activities": "[19.7.0]",
+    "UiPath.WebAPI.Activities": "[1.4.2]"
   },
   "webServices": [],
   "schemaVersion": "4.0",

@@ -47,6 +47,7 @@
   <Flowchart DisplayName="Guess Number" sap:VirtualizedContainerService.HintSize="630,636" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="ui:GenericValue" Name="intRandom" />
+      <Variable x:TypeArguments="ui:GenericValue" Name="intGuessNumber" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -88,7 +89,11 @@
               <av:Size x:Key="ShapeSize">216,53</av:Size>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InputDialog Label="{x:Null}" Options="{x:Null}" Result="{x:Null}" Title="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="216,53" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" />
+          <ui:InputDialog Label="{x:Null}" Options="{x:Null}" Title="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="216,53" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False">
+            <ui:InputDialog.Result>
+              <OutArgument x:TypeArguments="ui:GenericValue">[intGuessNumber]</OutArgument>
+            </ui:InputDialog.Result>
+          </ui:InputDialog>
         </FlowStep>
       </FlowStep.Next>
     </FlowStep>
