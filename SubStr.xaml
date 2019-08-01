@@ -1,10 +1,11 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="SubStr" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="SubStr" this:SubStr.instrSource="[&quot;&#x9;&lt;ul class=&quot;&quot;nav nav-tabs&quot;&quot;&gt;&#x9;&#x9;&#x9;&lt;li class=&quot;&quot;active&quot;&quot;&gt;&lt;a href=&quot;&quot;javascript:void(0)&quot;&quot;&gt;授权签字人列表&lt;/a&gt;&lt;/li&gt;&#x9;&#x9;&lt;/ul&gt;&#x9;&#x9;&lt;table id=&quot;&quot;contentTable1&quot;&quot; class=&quot;&quot;table table-striped table-bordered table-condensed&quot;&quot;&gt;&#x9;&#x9;&#x9;&lt;tr&gt;&#x9;&#x9;&#x9;&#x9;&lt;th&#x9;style=&quot;&quot;width:7%&quot;&quot;&gt;序号&lt;/th&gt;&#x9;&#x9;&#x9;&#x9;&lt;th&#x9;style=&quot;&quot;width:30%&quot;&quot;&gt;姓名&lt;/th&gt;&#x9;&#x9;&#x9;&#x9;&lt;th&#x9;style=&quot;&quot;width:30%&quot;&quot;&gt;职务职称&lt;/th&gt;&#x9;&#x9;&#x9;&#x9;&lt;th&#x9;style=&quot;&quot;width:30%&quot;&quot;&gt;批准授权签字领域&lt;/th&gt;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/tr&gt;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;tr&gt;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;1&lt;/td&gt;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;蒋向君&lt;/td&gt;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;站长&lt;/td&gt;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;所有领域&lt;/td&gt;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/tr&gt;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;tr&gt;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;2&lt;/td&gt;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;单玉平&lt;/td&gt;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;实验室主任&lt;/td&gt;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;所有领域&lt;/td&gt;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/tr&gt;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;tr&gt;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;3&lt;/td&gt;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;李峰&lt;/td&gt;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;技术负责人&lt;/td&gt;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;所有领域&lt;/td&gt;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/tr&gt;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/tr&gt;&#x9;&#x9;&lt;/table&gt;&#x9;&lt;ul class=&quot;&quot;nav nav-tabs&quot;&quot;&gt;&#x9;&#x9;&lt;li class=&quot;&quot;active&quot;&quot;&gt;&lt;a href=&quot;&quot;javascript:void(0)&quot;&quot;&gt;仪器设备及其检验检测能力&lt;/a&gt;&lt;/li&gt;&#x9;&lt;/ul&gt;&quot;]" this:SubStr.instrHead="&lt;table" this:SubStr.instrTail="&lt;/table&gt;" this:SubStr.boolInclude="True" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="instrSource" Type="InArgument(x:String)" />
     <x:Property Name="instrHead" Type="InArgument(x:String)" />
     <x:Property Name="outstrDestination" Type="OutArgument(x:String)" />
     <x:Property Name="instrTail" Type="InArgument(x:String)" />
     <x:Property Name="outstrSuccess" Type="OutArgument(x:String)" />
+    <x:Property Name="boolInclude" Type="InArgument(x:Boolean)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
@@ -110,7 +111,7 @@
               <av:Size x:Key="ShapeSize">216,70</av:Size>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="remove head" sap:VirtualizedContainerService.HintSize="673,1214" sap2010:WorkflowViewState.IdRef="Sequence_1">
+          <Sequence DisplayName="remove head" sap:VirtualizedContainerService.HintSize="216,70" sap2010:WorkflowViewState.IdRef="Sequence_1">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Int32" Name="intTailPos" />
               <Variable x:TypeArguments="x:Int32" Name="intBodyLength" />
@@ -133,7 +134,6 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </Assign>
-            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="635,63" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[&quot;Head Pos&quot; + intHeadPos.ToString]" />
             <Assign DisplayName="getTailPos" sap:VirtualizedContainerService.HintSize="635,61" sap2010:WorkflowViewState.IdRef="Assign_2">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Int32">[intTailPos]</OutArgument>
@@ -142,7 +142,6 @@
                 <InArgument x:TypeArguments="x:Int32">[instr(instrSource,instrTail)+len(instrTail)]</InArgument>
               </Assign.Value>
             </Assign>
-            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="635,63" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[&quot;Tail Pos&quot; + intTailPos.ToString]" />
             <Assign sap:VirtualizedContainerService.HintSize="635,61" sap2010:WorkflowViewState.IdRef="Assign_4">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Int32">[intBodyLength]</OutArgument>
@@ -151,7 +150,84 @@
                 <InArgument x:TypeArguments="x:Int32">[intTailPos-intHeadPos]</InArgument>
               </Assign.Value>
             </Assign>
-            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="635,63" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="[&quot;Body length&quot; + intBodyLength.ToString]" />
+            <If Condition="[boolInclude]" sap:VirtualizedContainerService.HintSize="635,508" sap2010:WorkflowViewState.IdRef="If_2">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="297,355" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign DisplayName="getHeadPos" sap:VirtualizedContainerService.HintSize="259,61" sap2010:WorkflowViewState.IdRef="Assign_8">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Int32">[intHeadPos]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Int32">[instr(instrSource,instrHead）]</InArgument>
+                    </Assign.Value>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Assign>
+                  <Assign DisplayName="getTailPos" sap:VirtualizedContainerService.HintSize="259,61" sap2010:WorkflowViewState.IdRef="Assign_9">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Int32">[intTailPos]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Int32">[instr(instrSource,instrTail)+len(instrTail)]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <Assign sap:VirtualizedContainerService.HintSize="259,61" sap2010:WorkflowViewState.IdRef="Assign_10">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Int32">[intBodyLength]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Int32">[intTailPos-intHeadPos]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap:VirtualizedContainerService.HintSize="297,355" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign DisplayName="getHeadPos" sap:VirtualizedContainerService.HintSize="259,61" sap2010:WorkflowViewState.IdRef="Assign_11">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Int32">[intHeadPos]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Int32">[instr(instrSource,instrHead）+ len(instrHead)]</InArgument>
+                    </Assign.Value>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Assign>
+                  <Assign DisplayName="getTailPos" sap:VirtualizedContainerService.HintSize="259,61" sap2010:WorkflowViewState.IdRef="Assign_12">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Int32">[intTailPos]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Int32">[instr(instrSource,instrTail)]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <Assign sap:VirtualizedContainerService.HintSize="259,61" sap2010:WorkflowViewState.IdRef="Assign_13">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Int32">[intBodyLength]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Int32">[intTailPos-intHeadPos]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </If.Else>
+            </If>
             <If Condition="[intHeadPos&lt;intTailPos]" sap:VirtualizedContainerService.HintSize="635,510" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
                 <Sequence sap:VirtualizedContainerService.HintSize="297,357" sap2010:WorkflowViewState.IdRef="Sequence_2">
@@ -214,5 +290,20 @@
     </FlowDecision>
     <x:Reference>__ReferenceID0</x:Reference>
     <x:Reference>__ReferenceID1</x:Reference>
+    <FlowStep>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">392,323.5</av:Point>
+          <av:Size x:Key="ShapeSize">216,53</av:Size>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="216,53" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[outstrDestination]" TopMost="True">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:MessageBox>
+    </FlowStep>
   </Flowchart>
 </Activity>

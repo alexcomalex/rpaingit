@@ -110,7 +110,7 @@
               <av:Size x:Key="ShapeSize">216,70</av:Size>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="remove head" sap:VirtualizedContainerService.HintSize="216,70" sap2010:WorkflowViewState.IdRef="Sequence_1">
+          <Sequence DisplayName="remove head" sap:VirtualizedContainerService.HintSize="673,905" sap2010:WorkflowViewState.IdRef="Sequence_1">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Int32" Name="intTailPos" />
               <Variable x:TypeArguments="x:Int32" Name="intBodyLength" />
@@ -133,7 +133,6 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </Assign>
-            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="635,63" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[&quot;Head Pos&quot; + intHeadPos.ToString]" />
             <Assign DisplayName="getTailPos" sap:VirtualizedContainerService.HintSize="635,61" sap2010:WorkflowViewState.IdRef="Assign_2">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Int32">[intTailPos]</OutArgument>
@@ -142,7 +141,6 @@
                 <InArgument x:TypeArguments="x:Int32">[instr(instrSource,instrTail)+len(instrTail)]</InArgument>
               </Assign.Value>
             </Assign>
-            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="635,63" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[&quot;Tail Pos&quot; + intTailPos.ToString]" />
             <Assign sap:VirtualizedContainerService.HintSize="635,61" sap2010:WorkflowViewState.IdRef="Assign_4">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Int32">[intBodyLength]</OutArgument>
@@ -151,7 +149,6 @@
                 <InArgument x:TypeArguments="x:Int32">[intTailPos-intHeadPos]</InArgument>
               </Assign.Value>
             </Assign>
-            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="635,63" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="[&quot;Body length&quot; + intBodyLength.ToString]" />
             <If Condition="[intHeadPos&lt;intTailPos]" sap:VirtualizedContainerService.HintSize="635,510" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
                 <Sequence sap:VirtualizedContainerService.HintSize="297,357" sap2010:WorkflowViewState.IdRef="Sequence_2">
