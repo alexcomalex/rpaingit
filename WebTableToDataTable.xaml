@@ -252,7 +252,7 @@
               <av:PointCollection x:Key="ConnectorLocation">130,75 110,75 110,57.0816666666667</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="remove HTML Tag's " sap:VirtualizedContainerService.HintSize="216,70" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence DisplayName="remove HTML Tag's " sap:VirtualizedContainerService.HintSize="297,347" sap2010:WorkflowViewState.IdRef="Sequence_5">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Int32" Name="LessSignPos" />
               <Variable x:TypeArguments="x:Int32" Name="MoreSignPos" />
@@ -270,7 +270,7 @@
                 <InArgument x:TypeArguments="x:Int32">[InStr(strWebTable,"&lt;")]</InArgument>
               </Assign.Value>
             </Assign>
-            <While sap:VirtualizedContainerService.HintSize="639,1324" sap2010:WorkflowViewState.IdRef="While_2">
+            <While sap:VirtualizedContainerService.HintSize="259,53" sap2010:WorkflowViewState.IdRef="While_2">
               <While.Variables>
                 <Variable x:TypeArguments="x:Int32" Name="SpacePos" />
               </While.Variables>
@@ -281,13 +281,14 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <While.Condition>[LessSignPos&gt;=1]</While.Condition>
-              <Sequence sap:VirtualizedContainerService.HintSize="597,1161" sap2010:WorkflowViewState.IdRef="Sequence_6">
+              <Sequence sap:VirtualizedContainerService.HintSize="216,70" sap2010:WorkflowViewState.IdRef="Sequence_6">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Assign sap:VirtualizedContainerService.HintSize="559,61" sap2010:WorkflowViewState.IdRef="Assign_11">
+                <Assign sap:VirtualizedContainerService.HintSize="480,61" sap2010:WorkflowViewState.IdRef="Assign_11">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:Int32">[SpacePos]</OutArgument>
                   </Assign.To>
@@ -295,7 +296,7 @@
                     <InArgument x:TypeArguments="x:Int32">[Instr(LessSignPos,strWebTable," ")]</InArgument>
                   </Assign.Value>
                 </Assign>
-                <Assign sap:VirtualizedContainerService.HintSize="559,61" sap2010:WorkflowViewState.IdRef="Assign_10">
+                <Assign sap:VirtualizedContainerService.HintSize="480,61" sap2010:WorkflowViewState.IdRef="Assign_10">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:Int32">[MoreSignPos]</OutArgument>
                   </Assign.To>
@@ -303,8 +304,14 @@
                     <InArgument x:TypeArguments="x:Int32">[InStr(LessSignPos,strWebTable,"&gt;")]</InArgument>
                   </Assign.Value>
                 </Assign>
-                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="559,63" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[LessSignPos.ToString +&quot;-&quot;  + SpacePos.ToString + &quot;-&quot; + MoreSignPos.ToString]" />
-                <If Condition="[SpacePos&gt;0 and SpacePos&lt;MoreSignPos]" DisplayName="If found space " sap:VirtualizedContainerService.HintSize="559,214" sap2010:WorkflowViewState.IdRef="If_2">
+                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="480,63" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[LessSignPos.ToString +&quot;-&quot;  + SpacePos.ToString + &quot;-&quot; + MoreSignPos.ToString]" />
+                <If Condition="[SpacePos&gt;0 and SpacePos&lt;MoreSignPos]" DisplayName="If found space " sap:VirtualizedContainerService.HintSize="480,53" sap2010:WorkflowViewState.IdRef="If_2">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
                   <If.Then>
                     <Assign sap:VirtualizedContainerService.HintSize="259,61" sap2010:WorkflowViewState.IdRef="Assign_12">
                       <Assign.To>
@@ -326,7 +333,7 @@
                     </Assign>
                   </If.Else>
                 </If>
-                <Assign sap:VirtualizedContainerService.HintSize="559,61" sap2010:WorkflowViewState.IdRef="Assign_14">
+                <Assign sap:VirtualizedContainerService.HintSize="480,61" sap2010:WorkflowViewState.IdRef="Assign_14">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:Int32">[LessSignPos]</OutArgument>
                   </Assign.To>
@@ -334,7 +341,7 @@
                     <InArgument x:TypeArguments="x:Int32">[InStr(MoreSignPos+1,strWebTable,"&lt;")]</InArgument>
                   </Assign.Value>
                 </Assign>
-                <If Condition="[LessSignPos &gt; MoreSignPos]" sap:VirtualizedContainerService.HintSize="559,409" sap2010:WorkflowViewState.IdRef="If_3">
+                <If Condition="[LessSignPos &gt; MoreSignPos]" sap:VirtualizedContainerService.HintSize="480,409" sap2010:WorkflowViewState.IdRef="If_3">
                   <If.Then>
                     <Sequence sap:VirtualizedContainerService.HintSize="297,256" sap2010:WorkflowViewState.IdRef="Sequence_7">
                       <sap:WorkflowViewStateService.ViewState>
@@ -356,6 +363,14 @@
                 </If>
               </Sequence>
             </While>
+            <Assign sap:VirtualizedContainerService.HintSize="259,61" sap2010:WorkflowViewState.IdRef="Assign_18">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[PureTable]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[PureTable.Replace(" ","")]</InArgument>
+              </Assign.Value>
+            </Assign>
           </Sequence>
           <FlowStep.Next>
             <FlowStep x:Name="__ReferenceID2">
